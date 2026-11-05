@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Year 6 Ratio & Proportion</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root{
+ --ink:#303347;--muted:#73778c;--cream:#fffaf2;--white:#fff;
+ --pink:#ff9fbe;--coral:#ff8d87;--yellow:#ffd978;--mint:#9fe4d0;
+ --blue:#9dc4ff;--purple:#cbb5ff;--shadow:0 18px 50px rgba(74,66,90,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:var(--ink);font-family:'Nunito',sans-serif;
+ background:
+ radial-gradient(circle at 8% 12%,rgba(255,159,190,.18) 0 90px,transparent 91px),
+ radial-gradient(circle at 92% 18%,rgba(157,196,255,.18) 0 110px,transparent 111px),
+ radial-gradient(circle at 18% 80%,rgba(159,228,208,.18) 0 100px,transparent 101px),
+ var(--cream);
+ line-height:1.55;
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;z-index:-1;
+ background-image:radial-gradient(#d8d1c9 1px,transparent 1px);background-size:18px 18px;
+}
+a{color:inherit}
+button,input{font-family:inherit}
+nav{
+ position:sticky;top:0;z-index:20;background:rgba(255,250,242,.9);
+ backdrop-filter:blur(16px);border-bottom:2px solid #f0e9df;
+ padding:12px 5%;display:flex;justify-content:space-between;align-items:center;
+}
+.logo{font-family:'Baloo 2';font-size:25px;font-weight:900;letter-spacing:-.5px}
+.logo b{color:var(--coral)}
+nav a{text-decoration:none;font-weight:900;font-size:13px;margin-left:18px;color:#62667a}
+nav a:hover{color:var(--coral)}
+.hero{
+ min-height:88vh;padding:70px 7%;display:flex;align-items:center;position:relative;overflow:hidden;
+ background:
+ radial-gradient(circle at 82% 25%,rgba(255,217,120,.65) 0 120px,transparent 121px),
+ radial-gradient(circle at 75% 78%,rgba(159,228,208,.55) 0 160px,transparent 161px),
+ linear-gradient(135deg,#fffdf8,#fff3f7 48%,#f1f7ff);
+}
+.hero:after{
+ content:"";position:absolute;right:-100px;bottom:-140px;width:360px;height:360px;
+ border-radius:48% 52% 62% 38%;background:rgba(203,181,255,.32);transform:rotate(18deg);
+}
+.hero-content{max-width:760px;z-index:2}
+.tag{color:#ef7180;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.hero h1{
+ font-family:'Baloo 2';font-size:clamp(62px,10vw,118px);line-height:.78;
+ margin:18px 0;letter-spacing:-4px;font-weight:900;
+}
+.hero h1 span{color:var(--coral);position:relative}
+.hero h1 span:after{content:"";position:absolute;left:2px;right:0;bottom:-9px;height:10px;background:var(--yellow);border-radius:100%;z-index:-1}
+.hero p{font-size:19px;color:var(--muted);max-width:650px}
+.buttons{margin-top:25px}
+.btn{
+ display:inline-block;border:0;border-radius:18px;padding:13px 21px;margin:7px 5px 0 0;
+ font-weight:900;cursor:pointer;text-decoration:none;box-shadow:0 7px 0 rgba(40,40,60,.1);
+ transition:.18s;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 0 rgba(40,40,60,.1)}
+.dark{background:var(--ink);color:#fff}
+.light{background:#fff;color:var(--ink);border:2px solid #eee4dc}
+.shape{
+ position:absolute;right:11%;top:25%;width:150px;height:150px;border-radius:42% 58% 50% 50%;
+ background:var(--pink);color:#fff;display:grid;place-items:center;
+ font-family:'Baloo 2';font-size:40px;font-weight:900;transform:rotate(8deg);
+ box-shadow:12px 18px 0 rgba(255,141,135,.25);
+}
+.shape:before{content:"✦";position:absolute;top:-25px;right:-25px;color:var(--yellow);font-size:34px}
+.shape:after{content:"♡";position:absolute;bottom:-30px;left:-35px;color:var(--coral);font-size:35px}
+
+section{max-width:1180px;margin:auto;padding:90px 25px}
+.title{max-width:760px;margin-bottom:38px}
+.title h2{font-family:'Baloo 2';font-size:54px;line-height:.95;margin:8px 0;letter-spacing:-1px}
+.title p{color:var(--muted);font-size:17px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card,.panel{
+ background:rgba(255,255,255,.88);border:2px solid #eee7df;border-radius:30px;padding:25px;
+ box-shadow:0 8px 0 rgba(83,73,94,.04);transition:.2s;
+}
+.card:hover,.panel:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+.card{min-height:220px;position:relative;overflow:hidden}
+.card:after{content:"✦";position:absolute;right:16px;top:13px;color:#eee4df;font-size:24px}
+.icon{width:58px;height:58px;border-radius:20px;display:grid;place-items:center;font-family:'Baloo 2';font-weight:900;font-size:25px;margin-bottom:18px}
+.c{background:#ffe4ec;color:#e85f7c}.g{background:#e8efff;color:#5376cf}.d{background:#ddf8ef;color:#329477}.z{background:#fff2c9;color:#a37b21}
+.card h3,.panel h3{font-family:'Baloo 2';font-size:27px;margin:6px 0}
+.muted{color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.balls{display:flex;justify-content:center;gap:12px;margin:28px}
+.ball{width:48px;height:48px;border-radius:50%;box-shadow:inset -5px -6px 0 rgba(0,0,0,.08)}
+.r{background:var(--coral)}.b{background:#7199f2}
+.ratio{font-family:'Baloo 2';font-size:55px;font-weight:900;text-align:center}
+.ratio .redtxt{color:var(--coral)}.ratio .bluetxt{color:#7199f2}
+.question{
+ background:linear-gradient(135deg,#4b4d72,#343653);color:#fff;border-radius:30px;
+ padding:30px;margin-top:20px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.question:after{content:"☁  ✦  ♡";position:absolute;right:24px;top:20px;color:rgba(255,255,255,.18);font-size:32px}
+.options button,.answer button{
+ border:0;background:#fff;color:var(--ink);border-radius:16px;padding:11px 19px;margin:4px;
+ font-weight:900;cursor:pointer;transition:.15s;box-shadow:0 4px 0 rgba(0,0,0,.08)
+}
+.options button:hover,.answer button:hover{transform:translateY(-2px)}
+.feedback{min-height:25px;margin-top:10px;font-weight:900}.ok{color:#63d2ae}.bad{color:#ffaaa4}
+
+.darksection{background:linear-gradient(135deg,#3f4165,#292b47);color:white;position:relative;overflow:hidden}
+.darksection:before{content:"✦  ♡  ✦";position:absolute;right:6%;top:40px;color:rgba(255,255,255,.12);font-size:70px}
+.darkinner{max-width:1180px;margin:auto;padding:90px 25px}
+.darksection .muted{color:#c2c4d2}
+.geo{display:grid;grid-template-columns:350px 1fr;gap:20px}
+.builder{background:#fff;color:var(--ink);border-radius:30px;padding:28px;box-shadow:var(--shadow)}
+.counterrow{display:flex;align-items:center;justify-content:center;gap:12px}
+.counter{padding:14px;border-radius:20px;text-align:center}
+.redbox{background:#fff0f3}.bluebox{background:#eef3ff}
+.counter button{border:0;background:#fff;border-radius:50%;width:32px;height:32px;font-weight:900;cursor:pointer}
+.num{font-family:'Baloo 2';font-size:37px;font-weight:900;padding:0 8px}
+.result{border-top:2px dashed #e8e1da;margin-top:22px;padding-top:18px}
+.result strong{font-family:'Baloo 2';display:block;font-size:39px}
+.embed{
+ background:#fff;color:var(--ink);border:3px dashed #ded7d0;border-radius:30px;
+ min-height:360px;padding:25px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+ box-shadow:var(--shadow)
+}
+.embed iframe{width:100%;height:520px;border:0;border-radius:20px}
+.virtual{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.market{
+ height:410px;border-radius:30px;background:linear-gradient(#ccecff 0 54%,#d9efd7 54%);
+ position:relative;overflow:hidden;border:5px solid #fff;box-shadow:var(--shadow)
+}
+.sign{
+ position:absolute;right:25px;top:25px;background:var(--yellow);padding:15px 18px;
+ font-family:'Baloo 2';font-weight:900;transform:rotate(4deg);border-radius:14px;box-shadow:5px 6px 0 rgba(0,0,0,.08)
+}
+.shelf{
+ position:absolute;left:9%;right:9%;bottom:78px;background:#a56a42;border:8px solid #77492f;
+ height:78px;display:flex;align-items:center;justify-content:center;font-size:40px;border-radius:10px
+}
+.shelf2{bottom:18px;transform:scale(.82)}
+.missions{background:#fff;border:2px solid #eee7df;border-radius:30px;padding:27px;box-shadow:var(--shadow)}
+.missiongrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.mission{background:#fff;border:2px solid #eee7df;border-radius:19px;padding:16px;text-align:left;cursor:pointer;transition:.18s}
+.mission:hover{transform:translateY(-3px)}.mission.done{background:#edfbf6;border-color:#78d5bb}
+.mission strong{display:block;font-family:'Baloo 2';font-size:20px}.mission small{color:var(--muted)}
+.missiondetail{margin-top:15px;background:#fff9ef;padding:18px;border-radius:18px;border:1px dashed #eadbc6}
+
+.practice{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.input{padding:12px;border:2px solid #e7e1db;border-radius:14px;width:130px;outline:none}
+.input:focus{border-color:var(--pink)}
+.check{border:0;background:var(--ink);color:#fff;padding:11px 17px;border-radius:15px;cursor:pointer;font-weight:900}
+.lifegrid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.life{border:2px solid #eee7df;background:#fff;border-radius:23px;padding:18px 8px;cursor:pointer;transition:.18s}
+.life:hover{transform:translateY(-5px);border-color:var(--pink)}
+.life span{font-size:31px;display:block}.life strong{display:block;font-family:'Baloo 2';font-size:19px}
+.output{grid-column:1/-1;background:#fff;border:2px solid #eee7df;border-radius:22px;padding:23px;box-shadow:0 8px 0 rgba(83,73,94,.04)}
+.challenge{background:linear-gradient(135deg,#3f4165,#272942);color:#fff}
+.challengeinner{max-width:1180px;margin:auto;padding:85px 25px}
+.challengebox{background:#fff;color:var(--ink);padding:30px;border-radius:30px;box-shadow:var(--shadow)}
+.challengebox h3{font-size:28px}
+.challengeinput{padding:13px;border:2px solid #e7e1db;border-radius:15px;width:180px}
+#badge{font-weight:900;color:#ffe39b}
+
+.summary{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sum{padding:30px;border-radius:30px;color:#fff;position:relative;overflow:hidden}
+.sum:first-child{background:linear-gradient(135deg,#ff9fbe,#ff8d87)}
+.sum:last-child{background:linear-gradient(135deg,#4b4d72,#2f314f)}
+.sum h3{font-family:'Baloo 2';font-size:34px;margin:0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}
+.checks label{background:#fff;border:2px solid #eee7df;border-radius:17px;padding:15px;font-weight:700}
+.checks input{accent-color:#ff8d87}
+footer{background:#292a3f;color:#fff;padding:45px 7%}
+footer p{color:#aaaebe}
+
+@media(max-width:900px){.grid4{grid-template-columns:1fr 1fr}.two,.geo,.virtual,.practice,.summary{grid-template-columns:1fr}.lifegrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){
+ nav div:last-child{display:none}.hero{padding:65px 25px}.shape{display:none}.grid4,.checks{grid-template-columns:1fr}
+ .lifegrid{grid-template-columns:1fr 1fr}.title h2{font-size:42px}.hero h1{font-size:70px}
+}
+</style>
+</head>
+<body>
+<nav><div class="logo">RATIO<b>&</b>PROPORTION</div><div><a href="#learn">Learn</a><a href="#explore">Explore</a><a href="#world">World</a><a href="#quiz">Quiz</a></div></nav>
+
+<header class="hero">
+<div><div class="tag">YEAR 6 • MATHEMATICS</div><h1>Ratio<br><span>&</span> Proportion</h1><p>Compare, simplify, scale and solve through an interactive digital learning adventure.</p><a class="btn dark" href="#learn">Start Learning →</a><a class="btn light" href="#sources">Four Digital Sources</a></div>
+<div class="shape">3 : 2</div>
+</header>
+
+<section id="sources">
+<div class="title"><div class="tag">YOUR DIGITAL JOURNEY</div><h2>Four tools. One mission.</h2><p>Use each digital source for a different stage of learning.</p></div>
+<div class="grid4">
+<div class="card"><div class="icon c">C</div><h3>Canva</h3><p class="muted">Visual introduction to ratio and proportion.</p></div>
+<div class="card"><div class="icon g">G</div><h3>GeoGebra</h3><p class="muted">Explore equivalent ratios interactively.</p></div>
+<div class="card"><div class="icon d">D</div><h3>Delightex EDU</h3><p class="muted">Experience ratio in a virtual world.</p></div>
+<div class="card"><div class="icon z">Z</div><h3>ZEP Quiz</h3><p class="muted">Assess understanding through a game.</p></div>
+</div>
+</section>
+
+<section id="learn">
+<div class="title"><div class="tag">01 • DISCOVER</div><h2>What is a ratio?</h2><p>A ratio compares two quantities.</p></div>
+<div class="two">
+<div class="panel" style="text-align:center"><div class="tag">RED : BLUE</div><div class="balls"><i class="ball r"></i><i class="ball r"></i><i class="ball r"></i><i class="ball b"></i><i class="ball b"></i></div><div class="ratio"><span class="redtxt">3</span> : <span class="bluetxt">2</span></div><p>3 red balls for every 2 blue balls.</p></div>
+<div class="panel"><h3>Ratio tells us the relationship.</h3><p class="muted">In <b>3 : 2</b>, 3 belongs to the first quantity and 2 belongs to the second quantity.</p><div style="background:#fff6df;border-left:4px solid #f4c95d;padding:14px"><b>TIP:</b> Keep the order of quantities in the question.</div></div>
+</div>
+<div class="question"><div class="tag" style="color:#f4c95d">THINK ABOUT IT</div><h3>There are 3 red balls and 2 blue balls. What is the ratio of red balls to blue balls?</h3><div class="options"><button onclick="ratioAnswer('3:2')">3 : 2</button><button onclick="ratioAnswer('2:3')">2 : 3</button><button onclick="ratioAnswer('5:2')">5 : 2</button></div><div id="ratioFeedback" class="feedback"></div></div>
+<div style="margin-top:45px"><div class="title"><div class="tag">DIGITAL SOURCE 1</div><h2 style="font-size:38px">Canva</h2><p>Click below to load your Canva presentation.</p></div><div class="embed" id="canvaBox"><h3>Canva Presentation</h3><button class="btn dark" onclick="loadEmbed('canva','canvaBox')">Load Canva</button></div></div>
+</section>
+
+<div class="darksection" id="explore"><div class="darkinner">
+<div class="title"><div class="tag">02 • EXPLORE</div><h2>See ratio change in real time.</h2><p class="muted">Manipulate the quantities and investigate equivalent ratios.</p></div>
+<div class="geo">
+<div class="builder"><h3>RATIO BUILDER</h3><div class="counterrow"><div class="counter redbox"><small>RED</small><div><button onclick="changeRed(-1)">−</button><span class="num" id="red">2</span><button onclick="changeRed(1)">+</button></div></div><b>:</b><div class="counter bluebox"><small>BLUE</small><div><button onclick="changeBlue(-1)">−</button><span class="num" id="blue">3</span><button onclick="changeBlue(1)">+</button></div></div></div><div class="result"><small>CURRENT RATIO</small><strong id="current">2 : 3</strong><small id="simple">Simplest form: 2 : 3</small></div></div>
+<div class="embed" id="geoBox"><h3>GeoGebra Activity</h3><p class="muted">Load your GeoGebra activity here.</p><button class="btn dark" onclick="loadEmbed('geogebra','geoBox')">Load GeoGebra</button></div>
+</div></div></div>
+
+<section id="world">
+<div class="title"><div class="tag">03 • EXPERIENCE</div><h2>Enter the Ratio World.</h2><p>Explore a virtual supermarket and complete the missions.</p></div>
+<div class="virtual"><div class="market"><div class="sign">RATIO<br>MARKET</div><div class="shelf">🍎 🍎 🍎 🍊 🍊</div><div class="shelf shelf2">🥤 🥤 🥤 🥤</div></div>
+<div class="missions"><div class="tag">MISSION PROGRESS</div><h3>Ratio Missions</h3><div class="missiongrid">
+<button class="mission" onclick="mission(this,1)">01<br><strong>Find the Ratio</strong><small>Apples : oranges</small></button>
+<button class="mission" onclick="mission(this,2)">02<br><strong>Simplify</strong><small>Find simplest form</small></button>
+<button class="mission" onclick="mission(this,3)">03<br><strong>Equivalent Ratio</strong><small>Scale the relationship</small></button>
+<button class="mission" onclick="mission(this,4)">04<br><strong>Proportion</strong><small>Find the missing amount</small></button>
+</div><div id="missionText" class="missiondetail">Select a mission to begin.</div><button class="btn dark" onclick="loadEmbed('delightex','delightexBox')">Load Delightex EDU</button></div></div>
+<div id="delightexBox" style="margin-top:25px"></div>
+</section>
+
+<section>
+<div class="title"><div class="tag">PRACTISE</div><h2>Can you solve it?</h2><p>Get instant feedback.</p></div>
+<div class="practice">
+<div class="panel"><div class="tag">01</div><h3>Simplify 4 : 6</h3><div class="answer"><button onclick="practice(this,true)">2 : 3</button><button onclick="practice(this,false)">3 : 2</button><button onclick="practice(this,false)">4 : 6</button></div><div class="feedback"></div></div>
+<div class="panel"><div class="tag">02</div><h3>Simplify 8 : 12</h3><div class="answer"><button onclick="practice(this,true)">2 : 3</button><button onclick="practice(this,false)">4 : 6</button><button onclick="practice(this,false)">3 : 4</button></div><div class="feedback"></div></div>
+<div class="panel"><div class="tag">03</div><h3>2 : 3 = 4 : ?</h3><input id="a3" class="input" type="number"><button class="check" onclick="check('a3',6,'f3')">Check</button><div id="f3" class="feedback"></div></div>
+<div class="panel"><div class="tag">04</div><h3>2 : 5 = 4 : ?</h3><input id="a4" class="input" type="number"><button class="check" onclick="check('a4',10,'f4')">Check</button><div id="f4" class="feedback"></div></div>
+</div>
+</section>
+
+<section>
+<div class="title"><div class="tag">APPLY</div><h2>Ratio in real life.</h2><p>Click a situation.</p></div>
+<div class="lifegrid">
+<button class="life" onclick="life('recipe')"><span>🍹</span><strong>Recipes</strong></button><button class="life" onclick="life('shopping')"><span>🛒</span><strong>Shopping</strong></button><button class="life" onclick="life('colour')"><span>🎨</span><strong>Colours</strong></button><button class="life" onclick="life('sports')"><span>🏀</span><strong>Sports</strong></button><button class="life" onclick="life('food')"><span>🍕</span><strong>Food</strong></button><button class="life" onclick="life('money')"><span>💰</span><strong>Money</strong></button>
+<div class="output" id="lifeOutput">Choose a situation.</div></div>
+</section>
+
+<div class="challenge"><div class="challengeinner"><div class="title"><div class="tag" style="color:#f4c95d">CHALLENGE MODE</div><h2 style="color:white">Become a Ratio Master.</h2><p class="muted">Complete the challenge to unlock your badge.</p></div>
+<div class="challengebox"><div class="tag">LEVEL 1</div><h3>The ratio of boys to girls is 3 : 4. There are 12 boys. How many girls are there?</h3><input id="challengeAnswer" class="challengeinput" type="number" placeholder="Your answer"><button class="btn dark" onclick="challenge()">Submit</button><div id="challengeFeedback" class="feedback"></div></div><p id="badge">⭐ Ratio Rookie — complete the challenge to unlock.</p></div></div>
+
+<section id="quiz">
+<div class="title"><div class="tag">04 • ASSESS</div><h2>Ready for the ZEP Quiz?</h2><p>Load your gamified assessment below.</p></div>
+<div class="panel"><div class="embed" id="zepBox"><h3>ZEP Quiz</h3><button class="btn dark" onclick="loadEmbed('zep','zepBox')">Load ZEP Quiz</button></div></div>
+</section>
+
+<section>
+<div class="title"><div class="tag">SUMMARY</div><h2>What have you learned?</h2><p>Check your skills.</p></div>
+<div class="summary"><div class="sum"><h3>RATIO</h3><p>Compares two quantities.</p><b>Example: 2 : 3</b></div><div class="sum"><h3>PROPORTION</h3><p>Shows equivalent relationships.</p><b>Example: 2 : 3 = 4 : 6</b></div></div>
+<div class="checks">
+<label><input type="checkbox" onchange="complete()"> Represent ratios</label><label><input type="checkbox" onchange="complete()"> Simplify ratios</label><label><input type="checkbox" onchange="complete()"> Find equivalent ratios</label><label><input type="checkbox" onchange="complete()"> Solve proportion problems</label><label><input type="checkbox" onchange="complete()"> Apply ratio in real life</label>
+</div>
+<div id="completion" class="panel" style="margin-top:20px;text-align:center">⭐ Complete all five skills to finish your journey.</div>
+</section>
+
+<footer><div class="logo">RATIO<b>&</b>PROPORTION</div><p>Year 6 Mathematics • Ratio & Proportion</p><p>CS 17.2 / LS 7.2.1 — Ratio • CS 17.3 / LS 7.3.1 — Proportion</p></footer>
+
+<script>
+/* ADD YOUR FOUR LINKS HERE */
+const SOURCES={canva:"",geogebra:"",delightex:"",zep:""};
+
+function loadEmbed(key,id){
+let u=SOURCES[key],box=document.getElementById(id);
+if(!u){box.innerHTML='<h3>'+key.toUpperCase()+' LINK NOT ADDED</h3><p>Add the URL in the SOURCES object at the bottom of index.html.</p>';return}
+box.innerHTML='<iframe src="'+u+'" allowfullscreen loading="lazy"></iframe>';
+}
+function ratioAnswer(a){let f=document.getElementById('ratioFeedback');if(a==='3:2'){f.textContent='✓ Correct! 3 red : 2 blue.';f.className='feedback ok'}else{f.textContent='✗ Try again. Red comes first, then blue.';f.className='feedback bad'}}
+let red=2,blue=3;
+function gcd(a,b){while(b){let t=b;b=a%b;a=t}return a}
+function update(){document.getElementById('red').textContent=red;document.getElementById('blue').textContent=blue;document.getElementById('current').textContent=red+' : '+blue;let g=gcd(red,blue);document.getElementById('simple').textContent='Simplest form: '+red/g+' : '+blue/g}
+function changeRed(x){red=Math.max(1,red+x);update()}function changeBlue(x){blue=Math.max(1,blue+x);update()}
+function mission(el,n){el.classList.add('done');let m=['','Count the apples and oranges. Write the ratio in the correct order.','Find the greatest common factor and divide both quantities by it.','Multiply both parts by the same number to create an equivalent ratio.','Use the scale factor to find the missing proportional quantity.'];document.getElementById('missionText').innerHTML='<b>Mission '+n+'</b><br>'+m[n]}
+function practice(el,c){let f=el.parentElement.nextElementSibling;if(c){f.textContent='✓ Excellent! Correct answer.';f.className='feedback ok'}else{f.textContent='✗ Not quite. Try again.';f.className='feedback bad'}}
+function check(id,a,fid){let f=document.getElementById(fid);if(Number(document.getElementById(id).value)===a){f.textContent='✓ Correct!';f.className='feedback ok'}else{f.textContent='✗ Try again. Think about the scale factor.';f.className='feedback bad'}}
+function life(t){let x={recipe:'🍹 Syrup : water = 1 : 4. If you use 3 cups of syrup, how many cups of water?',shopping:'🛒 Red pens : blue pens = 2 : 3. If there are 8 red pens, how many blue pens?',colour:'🎨 Yellow : blue paint = 3 : 1. If you use 6 cups of yellow paint, how much blue paint?',sports:'🏀 Defenders : attackers = 2 : 3. If there are 6 defenders, how many attackers?',food:'🍕 Cheese : pepperoni = 4 : 2. What is the simplest ratio?',money:'💰 Ali : Mei savings = 3 : 5. If Ali saves RM12, how much does Mei save?'};document.getElementById('lifeOutput').textContent=x[t]}
+function challenge(){let f=document.getElementById('challengeFeedback');if(Number(document.getElementById('challengeAnswer').value)===16){f.textContent='✓ Excellent! The scale factor is 4, so 4 × 4 = 16.';f.className='feedback ok';document.getElementById('badge').textContent='🏆 Ratio Rookie Unlocked!'}else{f.textContent='✗ Try again. Scale 3 boys to 12 boys.';f.className='feedback bad'}}
+function complete(){let n=[...document.querySelectorAll('.checks input')].filter(x=>x.checked).length;document.getElementById('completion').innerHTML=n===5?'🎉 <h3>Learning Journey Complete!</h3><p>You mastered the key Ratio & Proportion skills.</p>':'⭐ '+n+'/5 skills completed.'}
+</script>
+
+<style>
+.spark{position:fixed;pointer-events:none;font-size:20px;z-index:99;animation:pop .8s ease-out forwards}
+@keyframes pop{0%{transform:scale(.3) translateY(0);opacity:1}100%{transform:scale(1.5) translateY(-55px);opacity:0}}
+</style>
+<script>
+document.addEventListener('click',function(e){
+ if(e.target.closest('button,.btn,a')){
+   const s=document.createElement('span');s.className='spark';s.textContent=['✦','♡','★','•'][Math.floor(Math.random()*4)];
+   s.style.left=(e.clientX-8)+'px';s.style.top=(e.clientY-8)+'px';
+   document.body.appendChild(s);setTimeout(()=>s.remove(),800);
+ }
+});
+</script>
+</body>
+</html>
